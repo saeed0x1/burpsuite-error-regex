@@ -1,1 +1,3 @@
-# error-match-rules.tab
+# BurpSuite Error Message 
+
+Burpsuite error message check extension's regex
