@@ -1,0 +1,31 @@
+NPM_TOKEN|TOKEN(\'|\"|\ |=)|:x-oauth-basic|([A-Za-z0-9_]{10,}\:[A-Za-z0-9_-]{10,})	0	lud1161_personal	Low	Certain
+([^A-Z0-9]|^)(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}	0	gf_aws_keys	Low	Certain
+([^A-Za-z0-9+/]|^)(eyJ|YTo|Tzo|PD[89]|aHR0cHM6L|aHR0cDo|rO0)[%a-zA-Z0-9+/]+={0,2}	0	gf_base_64	Low	Certain
+AIza[0-9A-Za-z-_]{35}	0	gf_google_api	High	Certain
+ya29\.[0-9A-Za-z\-_]+	0	gf_google_oauth	High	Certain
+AKIA[0-9A-Z]{16}	0	gf_amazon_aws_access_key_id	High	Certain
+amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}	0	gf_amazon_aws_auth_token	High	Certain
+s3\.amazonaws.com[/]+|[a-zA-Z0-9_-]*\.s3\.amazonaws.com	0	gf_amazon_aws_url	High	Certain
+EAACEdEose0cBA[0-9A-Za-z]+	0	gf_facebook_access_token	High	Certain
+basic\s*[a-zA-Z0-9=:_\+\/-]+	0	gf_authorization_basic	High	Certain
+bearer\s*[a-zA-Z0-9_\-\.=:_\+\/]+	0	gf_authorization_bearer	High	Certain
+api[key|\s*]+[a-zA-Z0-9_\-]+	0	gf_authorization_api	High	Certain
+key-[0-9a-zA-Z]{32}	0	gf_mailgun_api_key	High	Certain
+SK[0-9a-fA-F]{32}	0	gf_authorization_api	High	Certain
+AC[a-zA-Z0-9_\-]{32}	0	gf_twilio_api_key	High	Certain
+AP[a-zA-Z0-9_\-]{32}	0	gf_twilio_account_sid	High	Certain
+access_token\$production\$[0-9a-z]{16}\$[0-9a-f]{32}	0	gf_paypal_braintree_access_token	High	Certain
+sq0csp-[ 0-9A-Za-z\-_]{43}|sq0[a-z]{3}-[0-9A-Za-z\-_]{22,43}	0	gf_square_oauth_secret	High	Certain
+sqOatp-[0-9A-Za-z\-_]{22}|EAAA[a-zA-Z0-9]{60}	0	gf_square_access_token	High	Certain
+rk_live_[0-9a-zA-Z]{24}	0	gf_stripe_restricted_api	High	Certain
+[a-zA-Z0-9_-]*:[a-zA-Z0-9_\-]+@github\.com*	0	gf_github_access_token	High	Certain
+-----BEGIN RSA PRIVATE KEY-----	0	gf_rsa_private_key	High	Certain
+-----BEGIN DSA PRIVATE KEY-----	0	gf_ssh_dsa_private_key	High	Certain
+-----BEGIN EC PRIVATE KEY-----	0	gf_ssh_dc_private_key	High	Certain
+-----BEGIN PGP PRIVATE KEY BLOCK-----	0	gf_pgp_private_block	High	Certain
+ey[A-Za-z0-9_-]*\.[A-Za-z0-9._-]*|ey[A-Za-z0-9_\/+-]*\.[A-Za-z0-9._\/+-]*	0	gf_json_web_token	High	Certain
+(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])	0	gf_ip	High	Certain
+CURLOPT_(HTTPHEADER|HEADER|COOKIE|RANGE|REFERER|USERAGENT|PROXYHEADER)	0	gf_php_curl	High	Certain
+aws_access|aws_secret|api[_-]?key|ListBucketResult|S3_ACCESS_KEY|Authorization:|RSA PRIVATE|Index of|aws_|secret|"ssh-rsa AA"	0	gf_sec	High	Certain
+Application-Trace|Routing Error|DEBUG\"? ?[=:] ?True|Caused by:|stack trace:|Microsoft .NET Framework|Traceback|[0-9]:in `|#!/us|WebApplicationException|java\\.lang\\.|phpinfo|swaggerUi|on line [0-9]|SQLSTATE	0	gf_debug_pages	High	Certain
+[^a-z0-9_](system|exec|popen|pcntl_exec|eval|create_function|unserialize|file_exists|md5_file|filemtime|filesize|"assert) ?\\("	0	gf_php_sinks	High	Certain
